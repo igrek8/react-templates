@@ -1,0 +1,42 @@
+{
+  "name": "@react-templates/example",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "jest": {
+    "snapshotSerializers": [
+      "@react-templates/jest-serializer"
+    ]
+  },
+  "dependencies": {
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18",
+    "react-intl": "^6"
+  },
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "test": "react-scripts test",
+    "build": "npx @react-templates/cli build -s src -o dist"
+  },
+  "devDependencies": {
+    "@react-templates/cli": "*",
+    "@react-templates/jest-serializer": "*",
+    "@storybook/addon-essentials": "7.0.12",
+    "@storybook/addon-interactions": "7.0.12",
+    "@storybook/addon-links": "7.0.12",
+    "@storybook/preset-create-react-app": "7.0.12",
+    "@storybook/react-webpack5": "7.0.12",
+    "@storybook/react": "7.0.12",
+    "@types/node": "16.18.31",
+    "@types/react-dom": "18.2.4",
+    "@types/react": "18.2.6",
+    "react-dom": "18.2.0",
+    "react-intl": "6.4.2",
+    "react-scripts": "5.0.1",
+    "react": "18.2.0",
+    "storybook": "7.0.12",
+    "typescript": "4.9.5",
+    "webpack": "5.83.1"
+  }
+}

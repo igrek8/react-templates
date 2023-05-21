@@ -1,0 +1,56 @@
+{
+  "name": "@react-templates/cli",
+  "version": "0.0.2",
+  "bin": ".bin/cli.js",
+  "license": "MIT",
+  "homepage": "https://github.com/igrek8/react-templates#readme",
+  "files": [
+    "dist",
+    "loader.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react-templates",
+    "cli"
+  ],
+  "description": "Builds react based templates",
+  "bugs": {
+    "url": "https://github.com/igrek8/react-templates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igrek8/react-templates.git#issue"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc --outDir dist"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7",
+    "@babel/preset-react": "^7",
+    "babel-loader": "^9",
+    "commander": "^10",
+    "css-loader": "^6",
+    "style-loader": "^3",
+    "ts-loader": "^9",
+    "tslib": "^2",
+    "typescript": "^4 || ^5",
+    "webpack-node-externals": "^3",
+    "webpack": "^5"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.21.5",
+    "@babel/preset-react": "7.18.6",
+    "@types/webpack-node-externals": "3.0.0",
+    "babel-loader": "9.1.2",
+    "commander": "10.0.1",
+    "css-loader": "6.7.4",
+    "style-loader": "3.3.3",
+    "ts-loader": "9.4.2",
+    "typescript": "5.0.4",
+    "webpack-node-externals": "3.0.0",
+    "webpack": "5.83.1"
+  }
+}

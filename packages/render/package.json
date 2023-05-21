@@ -1,0 +1,42 @@
+{
+  "name": "@react-templates/render",
+  "version": "0.0.2",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "homepage": "https://github.com/igrek8/react-templates#readme",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react-templates",
+    "render"
+  ],
+  "description": "Renders a react template to a static markup or text",
+  "bugs": {
+    "url": "https://github.com/igrek8/react-templates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igrek8/react-templates.git#issue"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "tslib": "^2"
+  },
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
+  },
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tslib": "2.5.2"
+  }
+}

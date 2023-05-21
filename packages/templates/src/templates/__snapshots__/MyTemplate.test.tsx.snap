@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a template 1`] = `
+<html>
+  <head>
+    <title>Snapshot</title>
+  </head>
+  <body>
+    <p class="title">Hello, John!</p>
+    <p>It is January 1, 2023 at 12:00:00 AM UTC</p>
+    <img src="image.jpeg" alt="Image" width="200" />
+  </body>
+</html>
+`;

@@ -1,0 +1,32 @@
+{
+  "name": "@react-templates/jest-serializer",
+  "version": "0.0.1",
+  "main": "./main.js",
+  "license": "MIT",
+  "homepage": "https://github.com/igrek8/react-templates#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react-templates",
+    "jest"
+  ],
+  "description": "Serializes React templates to HTML",
+  "bugs": {
+    "url": "https://github.com/igrek8/react-templates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igrek8/react-templates.git#issue"
+  },
+  "dependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "prettier": "*"
+  },
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "prettier": "2.8.8"
+  }
+}
