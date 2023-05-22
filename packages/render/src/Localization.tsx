@@ -5,11 +5,6 @@ export interface Localization {
    */
   locale: string;
   /**
-   * A text writing directionality used as `<html dir="ltr">`
-   * @example "ltr"
-   */
-  dir: string;
-  /**
    * Time zone to format date and time
    * @example "Europe/Berlin"
    */

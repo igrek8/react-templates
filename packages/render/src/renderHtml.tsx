@@ -4,14 +4,14 @@ import { replaceBaseUrl } from './replaceBaseUrl';
 import { RenderHtmlOptions } from './RenderHtmlOptions';
 
 export async function renderHtml<T extends object>(options: RenderHtmlOptions<T>) {
-  const { wrapper: Wrapper = React.Fragment } = options;
   return replaceBaseUrl(
     '<!DOCTYPE html>' +
       renderToStaticMarkup(
-        <html lang={options.locale} dir={options.dir}>
+        <html lang={options.locale} dir={options.direction}>
           <head>
             <meta charSet="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>{options.title}</title>
             {global.__stylesheets__?.flatMap((styles, i) =>
               styles.map(([, __html], j) => (
                 <style key={`${i}-${j}`} dangerouslySetInnerHTML={{ __html }} />
@@ -20,12 +20,11 @@ export async function renderHtml<T extends object>(options: RenderHtmlOptions<T>
             {options.styles?.map((__html, index) => (
               <style key={index} dangerouslySetInnerHTML={{ __html }} />
             ))}
-            <title>{options.title}</title>
           </head>
           <body className={options.theme}>
-            <Wrapper {...options}>
-              <options.template {...options.data} />
-            </Wrapper>
+            {options.wrapper
+              ? React.createElement(options.wrapper, options, options.template(options.data))
+              : options.template(options.data)}
           </body>
         </html>
       ),
