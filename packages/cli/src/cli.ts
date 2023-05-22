@@ -24,6 +24,7 @@ program
       {
         mode: 'production',
         devtool: options.sourceMaps ? 'source-map' : false,
+        target: 'node',
         watch: options.watch,
         entry: {
           index: options.source,
@@ -31,7 +32,7 @@ program
         output: {
           path: options.out,
           libraryTarget: 'commonjs2',
-          publicPath: '__webpack_public_path__' + '/',
+          publicPath: '/__webpack_public_path__/',
           assetModuleFilename: 'static/[hash][ext][query]',
           hashFunction: 'sha256',
           clean: true,

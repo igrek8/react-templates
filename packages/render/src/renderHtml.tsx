@@ -22,9 +22,13 @@ export async function renderHtml<T extends object>(options: RenderHtmlOptions<T>
             ))}
           </head>
           <body className={options.theme}>
-            {options.wrapper
-              ? React.createElement(options.wrapper, options, options.template(options.data))
-              : options.template(options.data)}
+            {options.wrapper ? (
+              <options.wrapper {...options}>
+                <options.template {...options.data} />
+              </options.wrapper>
+            ) : (
+              <options.template {...options.data} />
+            )}
           </body>
         </html>
       ),
