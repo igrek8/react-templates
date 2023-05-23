@@ -3,11 +3,12 @@ import path from 'path';
 import webpack from 'webpack';
 import externals from 'webpack-node-externals';
 
-interface WatchOptions {
+interface BuildOptions {
   source: string;
   out: string;
   watch: boolean;
   sourceMaps: boolean;
+  tsconfig?: string;
 }
 
 program
@@ -19,7 +20,8 @@ program
   .requiredOption('-o, --out <path>', 'output path', (out) => path.resolve(out))
   .requiredOption('-w, --watch', 'enable watch mode', false)
   .requiredOption('--source-maps', 'enable source maps', false)
-  .action((options: WatchOptions) => {
+  .option('--tsconfig <path>', 'tsconfig path', (out) => path.resolve(out))
+  .action((options: BuildOptions) => {
     webpack(
       {
         mode: 'production',
@@ -92,9 +94,8 @@ program
                   test: /\.(ts|tsx|cts|mts)$/i,
                   loader: 'ts-loader',
                   options: {
+                    configFile: options.tsconfig,
                     compilerOptions: {
-                      declaration: true,
-                      declarationMap: options.sourceMaps,
                       outDir: options.out,
                     },
                   },

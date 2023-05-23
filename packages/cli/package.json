@@ -1,6 +1,6 @@
 {
   "name": "@react-templates/cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "bin": ".bin/cli.js",
   "license": "MIT",
   "homepage": "https://github.com/igrek8/react-templates#readme",
